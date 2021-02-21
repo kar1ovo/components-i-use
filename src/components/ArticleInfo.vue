@@ -1,5 +1,5 @@
 <template>
-  <div
+  <!-- <div
     class="max-w-sm mx-auto my-8 p-8 space-y-4 font-sans bg-gray-100 rounded-2xl sm:max-w-4xl shadow-2xl"
   >
     <div>
@@ -83,6 +83,41 @@
         阅读原文
       </button>
     </div>
+  </div> -->
+  <div
+    class="mx-auto max-w-sm p-6 bg-gray-100 shadow-2xl my-8 rounded-2xl space-y-3 md:max-w-3xl"
+  >
+    <p class="text-3xl font-bold">{{ title }}</p>
+    <div class="flex space-x-2 opacity-50">
+      <div>
+        <i class="far fa-calendar-alt text-blue-400"></i>
+      </div>
+      <div class="bg-blue-400 rounded-md px-2 text-sm">{{ createTime }}</div>
+    </div>
+    <div class="flex space-x-1 opacity-50">
+      <div><i class="fas fa-tags text-blue-400"></i></div>
+      <div
+        class="bg-blue-400 rounded-md px-2 text-sm"
+        v-for="tag in tags"
+        :key="tag"
+      >
+        {{ tag }}
+      </div>
+      <!-- <div class="bg-blue-400 rounded-md px-2 text-sm">经验</div> -->
+    </div>
+    <p class="font-light leading-7 text-gray-400">{{ summary }}</p>
+    <div class="flex space-x-2">
+      <div>
+        <i class="far fa-eye text-blue-400 text-xl"></i>
+      </div>
+      <div class="text-blue-400 flex-1 text-xl">996</div>
+      <div
+        class="bg-gradient-to-r from-blue-700 to-blue-400 rounded-md shadow-2xl text-white py-2 px-6 cursor-pointer"
+        @click="gogogo"
+      >
+        阅读原文
+      </div>
+    </div>
   </div>
 </template>
 
@@ -90,7 +125,14 @@
 export default {
   props: ["title", "summary", "eyes", "createTime", "tags"],
   data() {
-    return {};
+    return {
+      tags: ["个人", "经验", "学习"],
+    };
+  },
+  methods: {
+    gogogo() {
+      alert("敬请期待");
+    },
   },
 };
 </script>
