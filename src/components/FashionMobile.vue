@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="md:flex">
     <div
       class="max-w-sm mx-auto bg-white rounded-3xl px-4 py-2 shadow-2xl my-4 transform flex-1 md:-rotate-12"
     >
@@ -46,7 +46,7 @@
           <div class="text-sm font-light">London</div>
         </div>
       </div>
-      <div class="mt-4">
+      <div class="mt-4 mb-4">
         <img
           class="rounded-2xl w-full shadow-2xl cursor-pointer"
           src="../assets/tw2.jpg"
@@ -55,16 +55,16 @@
       </div>
     </div>
     <div
-      class="max-w-sm max-h-screen shadow-2xl rounded-2xl mx-auto ot flex-1 py-4 px-4 my-2 bg-center text-white relative transform md:rotate-6"
+      class="max-w-sm min-h-screen shadow-2xl rounded-3xl mx-auto ot flex-1 py-4 px-4 my-2 text-white relative md:bg-center md:transform md:rotate-6"
     >
       <div class="flex">
         <div class="flex-1"><i class="fas fa-angle-left text-white"></i></div>
         <div><i class="fas fa-ellipsis-v text-white"></i></div>
       </div>
       <div class="mt-32"><i class="far fa-comment-alt"></i></div>
-      <div class="ml-1 mb-2">3</div>
+      <div class="ml-1 mb-4">3</div>
       <div><i class="far fa-heart"></i></div>
-      <div class="mb-2">579</div>
+      <div class="mb-4">579</div>
       <div><i class="far fa-clock"></i></div>
       <div class="">18</div>
 
@@ -83,8 +83,8 @@
           class="flex bg-blue-400 py-2 pl-5 pr-2 rounded-r-full rounded-tl-full cursor-pointer"
         >
           <div class="text-sm mr-2 font-semibold">Follow</div>
-          <div class="bg-white rounded-full h-5 w-5">
-            <i class="fas fa-plus text-black ml-1 mb-2 text-xs"></i>
+          <div class="bg-white rounded-full h-6 w-6">
+            <i class="fas fa-plus text-black ml-2 text-xs"></i>
           </div>
         </div>
       </div>
@@ -102,6 +102,7 @@ export default {};
 }
 .ot {
   background-image: url("../assets/tw3.jpg");
+  background-size: auto 100%;
   /* background-position-x: center; */
 }
 </style>
